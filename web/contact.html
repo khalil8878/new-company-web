@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联系我们｜公司官网</title>
+  <meta name="description" content="提交需求或直接与我们联系，24 小时内响应。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=1">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <h1>联系我们</h1>
+        <p>关于行车记录与行车安全应用的任何需求，欢迎与我们沟通。</p>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <div class="container contact__grid">
+        <form class="card form" id="contact-form" novalidate>
+          <div class="grid grid--2">
+            <label>姓名<input required name="name" placeholder="请输入姓名"></label>
+            <label>公司<input name="company" placeholder="公司名称"></label>
+            <label>邮箱<input required type="email" name="email" placeholder="you@example.com"></label>
+            <label>电话<input name="phone" placeholder="手机号或座机"></label>
+            <label>预算区间<select name="budget"><option value="">请选择</option><option>10-30万</option><option>30-80万</option><option>80万以上</option></select></label>
+            <label>需求<select name="needs" multiple><option>官网/电商</option><option>移动应用</option><option>数据中台</option></select></label>
+          </div>
+          <label>项目简介<textarea name="brief" rows="4" placeholder="请简单描述项目目标与时间"></textarea></label>
+          <label class="agree"><input type="checkbox" required> 我已阅读并同意隐私政策</label>
+          <button class="btn btn--primary" type="submit">提交</button>
+          <p class="form__hint" id="form-hint" role="status" aria-live="polite"></p>
+        </form>
+        <aside class="card contact__info">
+          <h3>联系方式</h3>
+          <p>地址：上海市浦东新区示例路 88 号</p>
+          <p>电话：021-8888 8888</p>
+          <p>邮箱：hello@example.com</p>
+          <p>工作时间：工作日 9:30–18:30</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <h2 class="section__title">常见问题</h2>
+        <details class="card"><summary>多久能得到回复？</summary><div class="details__content">我们在 24 小时内回复并安排沟通。</div></details>
+        <details class="card"><summary>如何保护我的隐私？</summary><div class="details__content">仅用于沟通与服务，不会对外共享。</div></details>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/layout.js?v=1"></script>
+  <script src="assets/js/main.js?v=1"></script>
+</body>
+</html>
+
+
