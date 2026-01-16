@@ -1,0 +1,94 @@
+:root{--brand:#2154FF;--teal:#18C4B8;--red:#FF4D4D;--text:#1f1f1f;--muted:#6B7280;--line:#E5E7EB;--bg:#F7F8FA;--radius:12px;--container:1120px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:"Inter","Noto Sans SC",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section__title{font-size:28px;margin:0 0 24px}
+.grid{display:grid;gap:20px}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.btn{display:inline-block;border-radius:10px;padding:12px 16px;font-weight:600;border:1px solid var(--line);transition:all .2s ease}
+.btn--primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn--ghost{background:#fff;color:var(--brand);border-color:var(--brand)}
+.btn--link{padding:6px 0;border:none;color:var(--brand);background:transparent}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(33,84,255,.15)}
+
+/* Header */
+.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
+.nav__bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav__logo{font-weight:700;color:var(--brand)}
+.nav__menu{display:flex;gap:20px;align-items:center}
+.nav__menu a{color:#111}
+.nav__cta{margin-left:8px}
+
+/* Hero */
+.hero{background:var(--bg)}
+.hero__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+.hero__title{font-size:40px;line-height:1.2;margin:0 0 12px}
+.hero__subtitle{color:var(--muted);margin:0 0 16px}
+.hero__visual .mockup{height:320px;border-radius:16px;background:linear-gradient(135deg,#E6ECFF,#F3FBF9);border:1px solid var(--line)}
+.hero__visual{display:flex;align-items:center;justify-content:center}
+.hero__visual{position:relative;width:100%;max-width:360px;height:220px;min-height:160px;overflow:hidden}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:#000}
+
+/* Ensure video doesn't stretch the hero grid — keep right column compact */
+.hero__grid { align-items: start; }
+.hero__proof{margin-top:14px;color:var(--muted);font-size:14px}
+
+/* Features/Services/Cases */
+.feature .icon{font-size:24px}
+.case__logo{font-weight:700;color:#111;margin-bottom:8px}
+
+/* Page hero */
+.page-hero{background:var(--bg)}
+.page-hero h1{margin:0 0 8px}
+.timeline__list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.logo-wall{display:flex;gap:24px;flex-wrap:wrap;color:#555}
+
+/* Contact */
+.contact__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.form input,.form select,.form textarea{padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit}
+.form .agree{flex-direction:row;align-items:center;gap:8px}
+.form__hint{color:var(--muted);margin-top:8px}
+
+/* FAQ */
+details{border-radius:var(--radius)}
+details>summary{cursor:pointer;font-weight:600}
+details[open] .details__content{margin-top:8px;color:#333}
+
+/* Footer */
+.footer{background:#0f1220;color:#c7c9d3;margin-top:40px}
+.footer a{color:#c7c9d3}
+.footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px;padding:36px 0}
+.social{display:flex;gap:12px}
+.social a{width:36px;height:36px;border:1px solid #2a2f45;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transition:.2s;overflow:hidden}
+.social a .icon{width:20px;height:20px;display:block;filter:invert(75%) brightness(90%)}
+.social a:hover{border-color:var(--brand);color:#fff;background:var(--brand)}
+.social a:hover .icon{filter:none;}
+.copyright{border-top:1px solid #2a2f45;padding:14px 0;font-size:14px;color:#8f93a6}
+
+/* ICP 备案号（仅首页显示） */
+.footer .beian{text-align:center;padding:8px 0;font-size:13px;color:#8f93a6}
+.footer .beian a{color:#8f93a6;text-decoration:underline}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .hero__grid{grid-template-columns:1fr}
+  .contact__grid{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 640px){
+  .grid--2,.grid--3{grid-template-columns:1fr}
+  .section{padding:56px 0}
+  .hero__title{font-size:32px}
+  /* 在小屏隐藏自动播放视频以节省流量并防止布局问题 */
+  .hero__visual{max-width:none;height:auto;min-height:0}
+  .hero__video{display:none}
+}
+
+
